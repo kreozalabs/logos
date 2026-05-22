@@ -1,0 +1,58 @@
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggering for testing
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+name: release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4.4.0
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+
+      - name: checkout
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v6
+
+      - name: setup pnpm
+        if: ${{ steps.release.outputs.release_created }}
+        uses: pnpm/action-setup@a8198c4bff370c8506180b035930dea56dbd5288
+
+      - name: setup node
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+
+      - name: install dependencies
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm install --no-frozen-lockfile
+
+      - name: lint code
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm run lint
+
+      - name: type check
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm run typecheck
+
+      - name: build package
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm run build
+
+      - name: publish to npm
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm publish --no-git-checks --provenance
