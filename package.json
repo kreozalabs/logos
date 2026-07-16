@@ -24,9 +24,6 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {
-    "lucide-react": "^0.368.0"
-  },
   "devDependencies": {
     "@types/react": "^19.0.0",
     "tsup": "^8.0.2",
