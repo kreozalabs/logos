@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/kreozalabs/icons/compare/v1.0.0...v1.0.1) (2026-07-16)
+
+
+### Bug Fixes
+
+* ignore `.dev` directory in git repository (trigger release-please) ([8cf862d](https://github.com/kreozalabs/icons/commit/8cf862d7707c78e95d58a4b40fc2cac93e5beb52))
+
 ## 1.0.0 (2026-05-22)
 
 
