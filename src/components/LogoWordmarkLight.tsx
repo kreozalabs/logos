@@ -1,47 +1,29 @@
-import { useId, type SVGProps } from "react";
-
-export function LogoWordmarkLight({ className, ...props }: SVGProps<SVGSVGElement>) {
-  const maskId = useId();
-
-  return (
-    <svg
-      viewBox="0 0 180 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      {...props}
+import * as React from "react";
+import type { SVGProps } from "react";
+export const LogoWordmarkLight = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 180 40"
+    {...props}
+  >
+    <path fill="#fafafa" d="m20 0 17.32 10v20L20 40 2.68 30V10z" />
+    <path
+      fill="currentColor"
+      d="M11.2 10H16v20h-4.8zM28.8 10l-12 10h5.6l6.4-5.6zM28.8 30l-12-10h5.6l6.4 5.6z"
+    />
+    <text
+      x={48}
+      y={28}
+      fill="#fafafa"
+      fontFamily="Inter, system-ui, sans-serif"
+      fontSize={22}
+      fontWeight={600}
+      letterSpacing={-0.5}
     >
-      <defs>
-        <mask id={maskId}>
-          <rect width="180" height="40" fill="white" />
-          <g transform="translate(0, 0) scale(0.4)">
-            {/* Negative Space K - inverted colors for dark bg */}
-            <rect x="28" y="25" width="12" height="50" fill="black" />
-            <path d="M72 25L42 50H56L72 36V25Z" fill="black" />
-            <path d="M72 75L42 50H56L72 64V75Z" fill="black" />
-          </g>
-        </mask>
-      </defs>
-
-      <g transform="translate(0, 0) scale(0.4)">
-        <path
-          d="M50 0L93.3 25V75L50 100L6.7 75V25L50 0Z"
-          fill="currentColor"
-          mask={`url(#${maskId})`}
-        />
-      </g>
-      
-      <text
-        x="48"
-        y="28"
-        fontFamily="Inter, system-ui, sans-serif"
-        fontSize="22"
-        fontWeight="600"
-        fill="currentColor"
-        letterSpacing="-0.5"
-      >
-        REOZA
-      </text>
-    </svg>
-  );
-}
+      {"REOZA"}
+    </text>
+  </svg>
+);
