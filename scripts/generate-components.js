@@ -17,7 +17,53 @@ function toPascalCase(str) {
     .replace(/\.svg$/, "");
 }
 
+function generateLightVariant(svgContent, isWordmark = false) {
+  let result = svgContent;
+  result = result.replace(/fill="#18181b"/g, 'fill="__TEMP_LIGHT__"');
+  result = result.replace(/fill="white"/g, 'fill="__TEMP_DARK__"');
+  result = result.replace(/fill="#ffffff"/gi, 'fill="__TEMP_DARK__"');
+
+  result = result.replace(/fill="__TEMP_LIGHT__"/g, 'fill="#fafafa"');
+  result = result.replace(/fill="__TEMP_DARK__"/g, 'fill="#18181b"');
+
+  if (isWordmark) {
+    result = result.replace('font-weight="700"', 'font-weight="600"');
+  }
+
+  return result;
+}
+
+function autoGenerateLightVariants() {
+  const files = fs.readdirSync(ASSETS_DIR).filter((f) => f.endsWith(".svg"));
+
+  for (const file of files) {
+    // Skip files that are already light variants
+    if (file.endsWith("-light.svg") || file.endsWith("-white.svg")) {
+      continue;
+    }
+
+    const baseName = file.replace(/\.svg$/, "");
+    const lightFileName = `${baseName}-light.svg`;
+    const masterPath = path.join(ASSETS_DIR, file);
+
+    const darkContent = fs.readFileSync(masterPath, "utf-8");
+
+    // Dynamically generate light variant if the master asset contains dark fill colors
+    if (
+      darkContent.includes("#18181b") ||
+      darkContent.includes("black") ||
+      darkContent.includes("#000000")
+    ) {
+      const isWordmark = file.includes("wordmark");
+      const lightContent = generateLightVariant(darkContent, isWordmark);
+      fs.writeFileSync(path.join(ASSETS_DIR, lightFileName), lightContent);
+    }
+  }
+}
+
 async function run() {
+  autoGenerateLightVariants();
+
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   } else {

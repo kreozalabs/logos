@@ -6,7 +6,7 @@ export const LogoWordmark = (props: SVGProps<SVGSVGElement>) => (
     width="1em"
     height="1em"
     fill="none"
-    viewBox="0 0 180 40"
+    viewBox="0 0 200 40"
     {...props}
   >
     <path fill="currentColor" d="m20 0 17.32 10v20L20 40 2.68 30V10z" />
@@ -23,7 +23,7 @@ export const LogoWordmark = (props: SVGProps<SVGSVGElement>) => (
       fontWeight={700}
       letterSpacing={-0.5}
     >
-      {"REOZA"}
+      {"KREOZA"}
     </text>
   </svg>
 );

@@ -1,10 +1,29 @@
 {
   "name": "@kreozalabs/logos",
   "version": "1.0.0",
+  "description": "Official Kreoza React logo components and SVG asset library",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Kreoza",
+  "homepage": "https://github.com/kreozalabs/logos#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreozalabs/logos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kreozalabs/logos/issues"
+  },
+  "keywords": [
+    "react",
+    "logos",
+    "svg",
+    "components",
+    "kreozalabs",
+    "kreoza"
+  ],
   "private": false,
   "type": "module",
   "packageManager": "pnpm@10.33.0",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -22,6 +41,7 @@
     "prebuild": "node scripts/generate-components.js",
     "generate": "node scripts/generate-components.js",
     "build": "tsup",
+    "build:zip": "node scripts/generate-components.js && node scripts/generate-zip.js",
     "dev": "node scripts/generate-components.js && tsup --watch",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",

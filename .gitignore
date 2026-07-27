@@ -145,3 +145,8 @@ vite.config.ts.timestamp-*
 
 # Development files
 .dev/
+
+# Temp files
+.zip-staging/
+logos.zip
+
