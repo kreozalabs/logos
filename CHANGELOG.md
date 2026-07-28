@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.8](https://github.com/kreozalabs/logos/compare/v0.0.7...v0.0.8) (2026-07-28)
+
+
+### Features
+
+* test automated release 0.0.8 ([c3afc64](https://github.com/kreozalabs/logos/commit/c3afc64221f5bc992f432419c21949e6c01c082d))
+* test automated release pipeline ([150dc35](https://github.com/kreozalabs/logos/commit/150dc35af7d8e72705ccfb5c834778ca55788af7))
+
 ## [0.0.7](https://github.com/kreozalabs/logos/compare/v0.0.6...v0.0.7) (2026-07-28)
 
 
