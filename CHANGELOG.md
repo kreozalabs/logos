@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.0.2 (2026-07-28)
+
+
+### Features
+
+* configure automated npm release workflow and make package public ([8584605](https://github.com/kreozalabs/logos/commit/8584605e25089a891a44081d625c81c6bb86e13b))
+* implement automated SVG-to-React component generation and add GitHub logo component ([42f9610](https://github.com/kreozalabs/logos/commit/42f96109d1f0489fa7c4c8850eaf044d1252944d))
+* implement light logo variants, add release zip generation, and initialize project documentation and licensing ([eb2c8ed](https://github.com/kreozalabs/logos/commit/eb2c8edd290e296f33dfe5ec5679faaacebcc147))
+* implement SVG-to-PNG asset generation pipeline for multi-platform icons and wordmarks in build script ([a6c353f](https://github.com/kreozalabs/logos/commit/a6c353f780f0925a8c5667dab1cf7bd7bc9dbfcc))
+* initialize @kreozalabs/icons package with logo components and asset sprites ([4050910](https://github.com/kreozalabs/logos/commit/4050910fedf52026af01b7c006eaff78245ee775))
+* replace text elements with vector paths in wordmark logos for consistent rendering ([3c0edc7](https://github.com/kreozalabs/logos/commit/3c0edc733ffe936ba9409c63b6276b212efa8926))
+
+
+### Bug Fixes
+
+* **ci:** add --no-git-checks to dry run publish step ([610f0d3](https://github.com/kreozalabs/logos/commit/610f0d32993ab57e6b83a2a2ecaf5b2aa7968273))
+* ignore `.dev` directory in git repository (trigger release-please) ([8cf862d](https://github.com/kreozalabs/logos/commit/8cf862d7707c78e95d58a4b40fc2cac93e5beb52))
+
+
+### Miscellaneous Chores
+
+* force test release version ([32a3984](https://github.com/kreozalabs/logos/commit/32a398426be35a1a42a693a5bdc6803bddd39794))
+
 ## [1.0.1](https://github.com/kreozalabs/logos/compare/v1.0.0...v1.0.1) (2026-07-16)
 
 ### Bug Fixes
