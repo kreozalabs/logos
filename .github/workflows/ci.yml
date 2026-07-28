@@ -37,4 +37,4 @@ jobs:
         run: pnpm run build:zip
 
       - name: dry run publish
-        run: pnpm publish --dry-run
+        run: pnpm publish --dry-run --no-git-checks
