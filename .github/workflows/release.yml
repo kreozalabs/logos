@@ -36,6 +36,10 @@ jobs:
           node-version: 22
           cache: "pnpm"
 
+      - name: update npm
+        if: ${{ steps.release.outputs.release_created }}
+        run: npm install -g npm@latest
+
       - name: install dependencies
         if: ${{ steps.release.outputs.release_created }}
         run: pnpm install --no-frozen-lockfile
