@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7](https://github.com/kreozalabs/logos/compare/v0.0.6...v0.0.7) (2026-07-28)
+
+
+### Miscellaneous Chores
+
+* test release 0.0.7 ([8bdf189](https://github.com/kreozalabs/logos/commit/8bdf1899d887a15ef6c20e634eed1a7af8bb8c98))
+
 ## [0.0.6](https://github.com/kreozalabs/logos/compare/v0.0.5...v0.0.6) (2026-07-28)
 
 
