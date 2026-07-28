@@ -1,6 +1,6 @@
 # @kreozalabs/logos
 
-Official React logo components and SVG assets for **Kreoza**.
+Official React logo components and brand assets for **Kreoza**.
 
 [![npm version](https://img.shields.io/npm/v/@kreozalabs/logos.svg)](https://www.npmjs.com/package/@kreozalabs/logos)
 
@@ -75,12 +75,12 @@ All logo components extend standard React SVG attributes (`React.SVGProps<SVGSVG
 
 ---
 
-## 📁 Raw SVG Assets & Release ZIP
+## 📁 Raw Assets & Release Archive
 
-If you need raw `.svg` files for design tools (Figma, Illustrator) or non-React environments:
+If you need standalone graphic assets for design tools (Figma, Illustrator), mobile/desktop apps, or non-React web applications:
 
-1. Raw SVG sources are available in the repository under [`assets/`](./assets/).
-2. Alternatively, download the bundled `logos.zip` attached to the latest [GitHub Release](https://github.com/kreozalabs/logos/releases).
+1. Raw SVG vector sources are available in the repository under [`assets/`](./assets/).
+2. A complete multi-format asset bundle (`logos.zip`) containing pre-rendered graphics across all supported formats, dimensions, and resolutions (including SVGs, raster images, app icons, and web/PWA assets) is attached to every [GitHub Release](https://github.com/kreozalabs/logos/releases).
 
 ---
 
@@ -99,7 +99,7 @@ pnpm install
 - **`pnpm build`**: Runs `tsup` to bundle TSX components into CJS and ESM distributions under `dist/`.
 - **`pnpm generate`**: Converts raw SVG files in `assets/` to TSX React components in `src/components/`.
 - **`pnpm dev`**: Generates components and starts `tsup` in watch mode.
-- **`pnpm build:zip`**: Bundles all SVG assets in `assets/` into a downloadable `logos.zip` archive.
+- **`pnpm build:zip`**: Generates all multi-platform asset variants and packages them into a downloadable `logos.zip` archive.
 - **`pnpm typecheck`**: Runs TypeScript type verification without emitting files.
 
 ---

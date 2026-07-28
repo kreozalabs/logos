@@ -1,7 +1,7 @@
 {
   "name": "@kreozalabs/logos",
   "version": "1.0.0",
-  "description": "Official Kreoza React logo components and SVG asset library",
+  "description": "Official Kreoza React logo components and multi-format brand asset library",
   "license": "SEE LICENSE IN LICENSE",
   "author": "Kreoza",
   "homepage": "https://github.com/kreozalabs/logos#readme",
@@ -15,6 +15,8 @@
   "keywords": [
     "react",
     "logos",
+    "brand",
+    "assets",
     "svg",
     "components",
     "kreozalabs",
