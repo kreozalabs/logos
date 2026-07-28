@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/kreozalabs/logos/compare/logos-v0.0.10...logos-v0.1.0) (2026-07-28)
+
+
+### Features
+
+* publish v1.0.0 ([1efe614](https://github.com/kreozalabs/logos/commit/1efe61462ff8d1f2bed1596fc1e6dea559a9bd02))
+
 ## [0.0.10](https://github.com/kreozalabs/logos/compare/logos-v0.0.9...logos-v0.0.10) (2026-07-28)
 
 
