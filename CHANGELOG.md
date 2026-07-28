@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.4](https://github.com/kreozalabs/logos/compare/v0.0.3...v0.0.4) (2026-07-28)
+
+
+### Bug Fixes
+
+* **release:** remove registry-url and use npm publish for OIDC ([fdac2bd](https://github.com/kreozalabs/logos/commit/fdac2bd1b8efb936f491b4d6db1edf47834b2a9b))
+
+
+### Miscellaneous Chores
+
+* test release 0.0.4 ([928901e](https://github.com/kreozalabs/logos/commit/928901eb05873b4306dd5f673c976be2759bb93a))
+
 ## [0.0.3](https://github.com/kreozalabs/logos/compare/v0.0.2...v0.0.3) (2026-07-28)
 
 
