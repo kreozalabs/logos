@@ -1,0 +1,40 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: install dependencies
+        run: pnpm install
+
+      - name: type check
+        run: pnpm run typecheck
+
+      - name: build package
+        run: pnpm run build
+
+      - name: build zip asset
+        run: pnpm run build:zip
+
+      - name: dry run publish
+        run: pnpm publish --dry-run

@@ -1,7 +1,0 @@
-- [x] 1. Rename repo to `kreozalabs/logos`
-- [x] 2. Add all SVG logos under `assets/`
-  - [x] Light Logo for dark mode
-  - [x] Wordmark logo with Logo and full name instead of Logo and REOZA
-- [x] 3. Set version to `1.0.0` in package.json
-- [ ] 4. Add `build:zip` script to generate `logos.zip`
-- [ ] 5. Publish to NPM (`@kreozalabs/logos`) & attach `logos.zip` to GitHub v1.0.0 Release

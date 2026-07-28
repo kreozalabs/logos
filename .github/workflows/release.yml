@@ -1,3 +1,5 @@
+name: release
+
 on:
   push:
     branches:
@@ -8,8 +10,6 @@ permissions:
   contents: write
   pull-requests: write
   id-token: write
-
-name: release
 
 jobs:
   release:
@@ -23,17 +23,17 @@ jobs:
 
       - name: checkout
         if: ${{ steps.release.outputs.release_created }}
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: setup pnpm
         if: ${{ steps.release.outputs.release_created }}
-        uses: pnpm/action-setup@a8198c4bff370c8506180b035930dea56dbd5288
+        uses: pnpm/action-setup@v4
 
       - name: setup node
         if: ${{ steps.release.outputs.release_created }}
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
           registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
 
