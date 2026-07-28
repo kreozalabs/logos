@@ -20,7 +20,8 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          release-type: node
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
 
       - name: checkout
         if: ${{ steps.release.outputs.release_created }}
@@ -61,8 +62,10 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         run: npm publish --provenance --access public
 
-      - name: upload zip asset to github release
+      - name: upload zip asset to github release and publish
         if: ${{ steps.release.outputs.release_created }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ steps.release.outputs.tag_name }} logos.zip --clobber
+        run: |
+          gh release upload ${{ steps.release.outputs.tag_name }} logos.zip --clobber
+          gh release edit ${{ steps.release.outputs.tag_name }} --draft=false
