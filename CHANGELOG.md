@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.3](https://github.com/kreozalabs/logos/compare/v0.0.2...v0.0.3) (2026-07-28)
+
+
+### Bug Fixes
+
+* **release:** add --access public to publish step ([df54578](https://github.com/kreozalabs/logos/commit/df545787f2971bc6e5914ee190f8acbd498e60e4))
+
+
+### Miscellaneous Chores
+
+* test release 0.0.3 ([0b9b0c5](https://github.com/kreozalabs/logos/commit/0b9b0c5013c59b0999d2a71b92dcdf8bef3061da))
+
 ## 0.0.2 (2026-07-28)
 
 
