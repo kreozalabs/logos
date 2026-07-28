@@ -34,7 +34,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
 
       - name: install dependencies
@@ -55,7 +54,7 @@ jobs:
 
       - name: publish to npm
         if: ${{ steps.release.outputs.release_created }}
-        run: pnpm publish --no-git-checks --provenance --access public
+        run: npm publish --provenance --access public
 
       - name: upload zip asset to github release
         if: ${{ steps.release.outputs.release_created }}
